@@ -28,7 +28,7 @@ const cloudinary = require("cloudinary").v2;
 
 // Configure Cloudinary
 cloudinary.config({
-  cloud_name: "lereacteur-cloudinary",
+  cloud_name: "dxwqcwkfy",
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
