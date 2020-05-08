@@ -71,12 +71,12 @@ router.post("/offer/publish", isAuthenticated, async (req, res) => {
     } else {
       // aucun utilisateur n'a été trouvé
       return res.status(401).json({
-        error: "Unauthorized"
+        error: "Unauthorized",
       });
     }
   } catch (error) {
     return res.status(400).json({
-      error: error.message
+      error: error.message,
     });
   }
 });
@@ -121,19 +121,19 @@ router.get("/offer/with-count", async (req, res) => {
 
     if (req.query.sort === "date-desc") {
       sort = {
-        date: "desc"
+        created: "desc",
       };
     } else if (req.query.sort === "date-asc") {
       sort = {
-        date: "asc"
+        created: "asc",
       };
     } else if (req.query.sort === "price-asc") {
       sort = {
-        price: "asc"
+        price: "asc",
       };
     } else if (req.query.sort === "price-desc") {
       sort = {
-        price: "desc"
+        price: "desc",
       };
     }
 
@@ -175,7 +175,7 @@ router.get("/offer/with-count", async (req, res) => {
     });
   } catch (error) {
     return res.status(400).json({
-      message: error.message
+      message: error.message,
     });
   }
 });
@@ -194,12 +194,12 @@ router.get("/offer/:id", async (req, res) => {
     } else {
       // l'offre existe pas
       return res.status(404).json({
-        message: "Offer not foud"
+        message: "Offer not foud",
       });
     }
   } catch (err) {
     return res.status(400).json({
-      message: error.message
+      message: error.message,
     });
   }
 });

@@ -1,6 +1,5 @@
 // Va nous permettre d'avoir accès à process.env
 require("dotenv").config();
-
 const express = require("express");
 const app = express();
 
